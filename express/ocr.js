@@ -25,6 +25,8 @@ app.set("view engine", "ejs");
 
 app.use('/public', express.static('public'));
 app.use('/uploads', express.static('uploads'));
+app.use('/views', express.static('views'));
+
 
 const router = express.Router();
 
@@ -38,7 +40,7 @@ router.get('/post', (req, res) => {
 
 
 router.get('/',(req,res) => {
-    res.render('./views/index', {
+    res.render('index', {
         title : ' ',
         imgPath : ' '
     });
