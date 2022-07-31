@@ -42,8 +42,7 @@ router.get('/post', (req, res) => {
 router.get('/',(req,res) => {
     res.render('./views/index', {
         title : ' ',
-        imgPath : ' ',
-        layout ; false
+        imgPath : ' '
     });
 });
 
