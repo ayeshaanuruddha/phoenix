@@ -41,7 +41,7 @@ router.get('/',(req,res) => {
     res.render('index');
 });
 
-router.post("/upload", (req,res) => {
+/*router.post("/upload", (req,res) => {
     upload(req,res, err => {
         fs.readFile(`./uploads/${req.file.originalname}`,(err, data) =>{
             if(err) return console.log('This is your error');
@@ -66,7 +66,7 @@ router.post("/upload", (req,res) => {
 router.get("/download",(req,res) => {
     const file = `${__dirname}/tesseract.js-ocr-result.pdf`;
     res.download(file);
-});
+});*/
 
 app.use('/.netlify/functions/ocr', router);
 
