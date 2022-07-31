@@ -30,15 +30,15 @@ const router = express.Router();
 
 //Routes
 
-router.get('/', (req, res) => {
+router.get('/post', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write('<h1>Hello from Express.js!</h1>');
   res.end();
 });
 
-/*
+
 router.get('/',(req,res) => {
-    res.render('index', {
+    res.render('views/index', {
         title : ' ',
         imgPath : ' '
     });
