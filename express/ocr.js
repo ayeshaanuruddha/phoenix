@@ -70,7 +70,6 @@ router.get("/download",(req,res) => {
     const file = `${__dirname}/tesseract.js-ocr-result.pdf`;
     res.download(file);
 });
-*/
 
 app.use('/.netlify/functions/ocr', router);
 
