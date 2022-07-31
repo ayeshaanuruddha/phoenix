@@ -22,6 +22,7 @@ const storage = multer.diskStorage({
 const upload = multer({storage: storage}).single("avatar");
 
 app.set("view engine", "ejs");
+app.engine('ejs', require('ejs').__express);
 
 app.use('/public', express.static('public'));
 app.use('/uploads', express.static('uploads'));
