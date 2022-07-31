@@ -30,6 +30,13 @@ const router = express.Router();
 
 //Routes
 
+router.get('/', (req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write('<h1>Hello from Express.js!</h1>');
+  res.end();
+});
+
+/*
 router.get('/',(req,res) => {
     res.render('index', {
         title : ' ',
@@ -63,6 +70,7 @@ router.get("/download",(req,res) => {
     const file = `${__dirname}/tesseract.js-ocr-result.pdf`;
     res.download(file);
 });
+*/
 
 app.use('/.netlify/functions/ocr', router);
 
