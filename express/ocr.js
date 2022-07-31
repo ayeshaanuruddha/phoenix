@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage: storage}).single("avatar");
 
-app.set("view engine", "ejs");
+app.set("view engine", "views");
 
 app.use('/public', express.static('public'));
 app.use('/uploads', express.static('uploads'));
@@ -40,7 +40,7 @@ router.get('/post', (req, res) => {
 
 
 router.get('/',(req,res) => {
-    res.render('./views/index', {
+    res.render('index', {
         title : ' ',
         imgPath : ' '
     });
