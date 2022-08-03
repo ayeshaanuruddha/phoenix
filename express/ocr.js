@@ -6,6 +6,7 @@ const express = require('express');
 const serverless = require('serverless-http');
 const app = express();
 const fs = require("fs");
+const path = require("path");
 const multer = require('multer');
 //const path = require('path');
 const { TesseractWorker } = require("tesseract.js");
