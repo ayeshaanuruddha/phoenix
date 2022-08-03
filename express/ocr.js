@@ -40,8 +40,8 @@ router.get('/post', (req, res) => {
 });
 
 
-router.get('/',(req,res) => {
-    res.render('index');
+router.get('/index',(req,res) => {
+    res.render('index.html');
 });
 
 /*router.post("/upload", (req,res) => {
